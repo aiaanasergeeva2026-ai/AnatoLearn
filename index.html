@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnatoLearn 3D</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+    <h1 class="anato-title">AnatoLearn <span>3D</span></h1>
+    <div class="ecg-line">
+        <svg viewBox="0 0 700 100" preserveAspectRatio="none">
+            <path class="ecg-base"
+                  d="M0 50 H180 L195 50 L210 50 L225 15
+                     L240 85 L255 38 L270 50 H700" />
+            <path class="ecg-moving"
+                  d="M0 50 H180 L195 50 L210 50 L225 15
+                     L240 85 L255 38 L270 50 H700" />
+        </svg>
+    </div>
+   <div class="anato-tagline">INTERACTIVE HUMAN ANATOMY</div>
+<p id="subtitle">Интерактивное изучение анатомии человека</p>
+</header>
+<nav class="anchor-nav">
+    <a href="#body"          class="nav-btn">Основное тело</a>
+    <a href="#heart"         class="nav-btn">Сердце</a>
+    <a href="#muscles"       class="nav-btn">Мышцы</a>
+    <a href="#muscles"       class="nav-btn">Внутренние органы</a>
+</nav>
+
+
+<main>
+    <section id="body" class="model-section">
+        <div class="model-viewer">
+            <div class="sketchfab-embed-wrapper"> 
+                <iframe src="https://sketchfab.com/models/9b0b079953b840bc9a13f524b60041e4/embed"> </iframe>
+        </div>
+        </div>
+        <div class="model-description">
+            <h2>Основное тело</h2>
+            <p>
+                Тело человека — это сложная биологическая система, в которой
+                согласованно работают кости, мышцы, органы, сосуды и нервы.
+                Внешне мы видим только кожу и общие очертания фигуры, но под
+                ней скрыто множество взаимосвязанных структур.
+            </p>
+            <p>
+                 Основу тела образует <strong>скелет</strong> — около 206 костей,
+                которые поддерживают форму, защищают внутренние органы и служат
+                опорой для мышц. Вместе с мышцами скелет обеспечивает движение:
+                мышцы сокращаются, тянут за собой кости, и тело меняет положение.
+            </p>
+        </div>
+
+    </section>
+
+    <section id="heart" class="model-section">
+
+        <div class="model-viewer">
+            <iframe src="https://sketchfab.com/models/a70c0c47fe4b4bbfabfc8f445365d5a4/embed"> </iframe> 
+        </div>
+
+        <div class="model-description">
+            <h2>Сердце</h2>
+            <p>
+                Сердце — это полый мышечный орган, который работает как насос
+                и непрерывно перекачивает кровь по всему организму. Оно
+                расположено в грудной клетке между лёгкими, немного смещено
+                влево, и по размеру примерно соответствует сжатому кулаку
+                человека.
+            </p>
+            <p>
+                Сердце состоит из <strong>четырёх камер</strong>: двух предсердий
+                и двух желудочков. Правая и левая стороны разделены перегородкой,
+                которая не даёт крови смешиваться. В сердце также есть
+                <strong>четыре клапана</strong> — трёхстворчатый, лёгочный,
+                митральный и аортальный. Они работают как маленькие дверцы:
+                открываются, пропуская кровь, и закрываются, чтобы она не текла
+                назад.
+            </p>
+        </div>
+
+    </section>
+    <section id="muscles" class="model-section">
+
+        <div class="model-viewer">
+            <iframe src="https://sketchfab.com/models/8a99795ae6e8440b8a87e59ca6821b55/embed"> </iframe>
+        </div>
+
+        <div class="model-description">
+            <h2>Мышцы</h2>
+            <p>
+               Мышцы — это ткань, которая обеспечивает движение тела, поддерживает
+            позу и вырабатывает тепло. В теле человека насчитывается более
+            600 мышц, и вместе они составляют около 40% массы тела.
+            </p>
+            <p>
+                Мышцы делятся на <strong>три основных типа</strong>:
+                скелетные, гладкие и сердечную. <strong>Скелетные мышцы</strong>
+                прикреплены к костям и работают под контролем сознания — именно
+                они позволяют нам ходить, бегать, поднимать предметы.
+                <strong>Гладкие мышцы</strong> находятся внутри органов (желудок,
+                кишечник, сосуды) и работают автоматически, без нашего участия.
+                <strong>Сердечная мышца</strong> — особая, она непрерывно
+                сокращается и перекачивает кровь.
+            </p>
+        </div>
+
+    </section>
+
+
+    <section class="quiz-section">
+        <h2>Проверь свои знания</h2>
+        <p class="quiz-subtitle">Пройди небольшой тест по анатомии человека</p>
+
+
+        <div id="quizScreen">
+            <div class="quiz-progress">
+                <div class="quiz-progress-bar" id="quizProgressBar"></div>
+            </div>
+
+            <div class="quiz-counter" id="quizCounter">Вопрос 1 из 8</div>
+
+            <h3 class="quiz-question" id="quizQuestion"></h3>
+
+            <div class="quiz-options" id="quizOptions"></div>
+
+            <button class="quiz-next" id="quizNext">Следующий вопрос →</button>
+        </div>
+
+    
+        <div class="quiz-result" id="quizResult">
+            <h3>Результат</h3>
+            <div class="quiz-score" id="quizScore">0 / 8</div>
+            <p class="quiz-message" id="quizMessage"></p>
+            <button class="quiz-restart" id="quizRestart">🔄 Пройти ещё раз</button>
+        </div>
+    </section>
+
+</main>
+
+
+<footer>
+    <p>© 2026 AnatoLearn 3D</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
